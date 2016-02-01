@@ -41,7 +41,7 @@ public class Main {
 		for (int i = 0 ; i<=10 ; i++){
 			
 			radians = Math.toRadians(x);
-			error[i] = outcome[i] - (2*Math.sin(radians)*Math.sin(radians)*Math.tan(radians));
+			error[i] = Math.abs(outcome[i] - (1/2*(2*x-Math.sin(radians)+2)));
 			System.out.println("Euler blad"+i+"   :"+error[i]);
 			x=(x+1) *h;
 		}
@@ -74,7 +74,7 @@ public class Main {
 		for (int i = 0 ; i<=10 ; i++){
 			
 			radians = Math.toRadians(x);
-			error[i] = outcome1[i] - (2*Math.sin(radians)*Math.sin(radians)*Math.tan(radians));
+			error[i] = Math.abs(outcome1[i] - (1/2*(2*x-Math.sin(radians)+2)));
 			System.out.println("Heun blad"+i+"   :"+error[i]);
 			x=(x+1) *h;
 		}
